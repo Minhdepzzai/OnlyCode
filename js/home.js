@@ -16,43 +16,80 @@ const modal = document.getElementById('modal');
       modal.setAttribute('aria-hidden', 'true');
     }
 
-    function addTemplateCard({ title, description, price, views,file_name, category }) {
-        const container = document.getElementById("create-post");
-        if (!container) return console.error("Không tìm thấy #create-post");
+    // function addTemplateCard({ title, description, price, views,file_name, category }) {
+    //     const container = document.getElementById("create-post");
+    //     if (!container) return console.error("Không tìm thấy #create-post");
 
-        const article = document.createElement("article");
-        article.className = "col-span-1 sm:col-span-1 lg:col-span-1 rounded-lg bg-gray-800/50 p-4 border border-white/5";
-        const baseURL = "https://minhdepzzai.github.io/Troll-Web/";
-        article.innerHTML = `
-            <div class="h-40 rounded-lg overflow-hidden mb-3 relative">
-              <img src="${baseURL}${file_name}"
-                  class="w-full h-full object-cover"
-                  alt="preview">
+    //     const article = document.createElement("article");
+    //     article.className = "col-span-1 sm:col-span-1 lg:col-span-1 rounded-lg bg-gray-800/50 p-4 border border-white/5";
+    //     article.innerHTML = `
+    //         <div class="h-40 rounded-lg overflow-hidden mb-3 relative">
+    //           <img src="${baseURL}${file_name}"
+    //               class="w-full h-full object-cover"
+    //               alt="preview">
               
-              <!-- Tag category -->
-              <span class="absolute bottom-3 left-3 bg-black/40 text-xs py-1 px-2 rounded text-white">
-                  ${category}
-              </span>
+    //           <!-- Tag category -->
+    //           <span class="absolute bottom-3 left-3 bg-black/40 text-xs py-1 px-2 rounded text-white">
+    //               ${category}
+    //           </span>
+    //       </div>
+
+    //         <h3 class="font-semibold text-lg">${title}</h3>
+    //         <p class="text-sm text-gray-400 my-2">${description}</p>
+
+    //         <div class="flex items-center justify-between mt-4">
+    //         <div class="flex items-center gap-3">
+    //             <span class="text-sm font-medium">₫${price.toLocaleString()}</span>
+    //             <span class="text-xs text-gray-400">• ${views} Đánh giá</span>
+    //             <span class="text-gray-400">5.0 ★</span>
+    //         </div>
+    //         <div class="flex items-center gap-2">
+    //             <button class="px-3 py-1 text-sm rounded bg-white/5 hover:bg-white/10">Liên hệ</button>
+    //             <button class="px-3 py-1 text-sm rounded bg-indigo-600 hover:bg-indigo-500 text-white">Mua</button>
+    //         </div>
+    //         </div>
+    //     `;
+
+    //     container.appendChild(article);
+    // }
+
+
+    function addTemplateCard({ title, description, price, views, file_name, category }) {
+    const container = document.getElementById("create-post");
+    if (!container) return console.error("Không tìm thấy #create-post");
+
+    const article = document.createElement("article");
+    article.className = "col-span-1 sm:col-span-1 lg:col-span-1 rounded-lg bg-gray-800/50 p-4 border border-white/5";
+
+    article.innerHTML = `
+        <div class="h-40 rounded-lg overflow-hidden mb-3 relative">
+          <img src="${file_name}"
+              class="w-full h-full object-cover"
+              alt="preview">
+          
+          <span class="absolute bottom-3 left-3 bg-black/40 text-xs py-1 px-2 rounded text-white">
+              ${category}
+          </span>
+        </div>
+
+        <h3 class="font-semibold text-lg">${title}</h3>
+        <p class="text-sm text-gray-400 my-2">${description}</p>
+
+        <div class="flex items-center justify-between mt-4">
+          <div class="flex items-center gap-3">
+            <span class="text-sm font-medium">₫${price.toLocaleString()}</span>
+            <span class="text-xs text-gray-400">• ${views} Đánh giá</span>
+            <span class="text-gray-400">5.0 ★</span>
           </div>
+          <div class="flex items-center gap-2">
+            <button class="px-3 py-1 text-sm rounded bg-white/5 hover:bg-white/10">Liên hệ</button>
+            <button class="px-3 py-1 text-sm rounded bg-indigo-600 hover:bg-indigo-500 text-white">Mua</button>
+          </div>
+        </div>
+    `;
 
-            <h3 class="font-semibold text-lg">${title}</h3>
-            <p class="text-sm text-gray-400 my-2">${description}</p>
-
-            <div class="flex items-center justify-between mt-4">
-            <div class="flex items-center gap-3">
-                <span class="text-sm font-medium">₫${price.toLocaleString()}</span>
-                <span class="text-xs text-gray-400">• ${views} Đánh giá</span>
-                <span class="text-gray-400">5.0 ★</span>
-            </div>
-            <div class="flex items-center gap-2">
-                <button class="px-3 py-1 text-sm rounded bg-white/5 hover:bg-white/10">Liên hệ</button>
-                <button class="px-3 py-1 text-sm rounded bg-indigo-600 hover:bg-indigo-500 text-white">Mua</button>
-            </div>
-            </div>
-        `;
-
-        container.appendChild(article);
-    }
+    container.appendChild(article);
+}
 
 
     createBtn?.addEventListener('click', openModal);
