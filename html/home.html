@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Template Marketplace - Demo</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../css/home.css" />
+</head>
+<body class="bg-gray-900 text-gray-200 min-h-screen">
+  <!-- NAV -->
+  <nav class="relative bg-gray-800/50 after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-white/10">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="relative flex h-16 items-center justify-between">
+        <!-- left: brand -->
+        <div class="flex items-center gap-4">
+          <div class="flex shrink-0 items-center">
+            <img src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500" alt="Logo" class="h-8 w-auto" />
+          </div>
+          <div class="hidden sm:flex gap-4">
+            <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">Thị trường</a>
+            <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">Tin nhắn</a>
+            <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">Hỗ trợ</a>
+          </div>
+        </div>
+
+        <!-- center: search (optional) -->
+        <div class="hidden md:block flex-1 px-6">
+          <div class="relative max-w-xl">
+            <input type="search" placeholder="Tìm templates, ví dụ: dashboard, landing..." class="w-full rounded-md bg-gray-800/60 placeholder:text-gray-400 px-3 py-2 text-sm focus:outline-indigo-500" />
+            <button class="absolute right-1 top-1/2 -translate-y-1/2 rounded px-2 py-1 text-sm text-gray-300 hover:text-white">Tìm</button>
+          </div>
+        </div>
+
+        <!-- right: actions -->
+        <div class="flex items-center gap-3">
+          <button id="create-btn" class="hidden sm:inline-flex items-center gap-2 rounded bg-indigo-600 px-3 py-2 text-sm font-medium text-white hover:bg-indigo-500 shadow">
+            <!-- icon -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-4 h-4">
+              <path d="M12 5v14M5 12h14" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Tạo bài
+          </button>
+
+          <button class="relative rounded-full p-1 text-gray-400 hover:text-white focus:outline-2 focus:outline-offset-2 focus:outline-indigo-500">
+            <span class="sr-only">View notifications</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-6 h-6">
+              <path d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+
+          <!-- profile -->
+          <div class="relative">
+            <button class="flex items-center gap-2 rounded-full focus:outline-2 focus:outline-offset-2 focus:outline-indigo-500">
+              <a href="./Sena.html"><img src="/img/mixi.png" alt="avatar" class="h-8 w-8 rounded-full object-cover" /></a>
+              
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MAIN: two columns -->
+  <main class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8">
+    <div class="md:grid md:grid-cols-12 md:gap-6">
+      <!-- SIDEBAR -->
+      <aside class="md:col-span-3 mb-6 md:mb-0">
+        <div class="sticky top-8 rounded-lg border border-white/5 bg-gray-800/40 p-4">
+          <h3 class="text-sm font-semibold text-gray-200 mb-3">Bộ lọc & Quản lý</h3>
+          <div class="flex flex-col gap-2">
+            <a href="#" class="px-3 py-2 rounded bg-gray-900/40 text-sm">Dashboard</a>
+            <a href="#" class="px-3 py-2 rounded text-sm hover:bg-white/5">My Templates</a>
+            <a href="#" class="px-3 py-2 rounded text-sm hover:bg-white/5">Sales</a>
+            <a href="#" class="px-3 py-2 rounded text-sm hover:bg-white/5">Settings</a>
+          </div>
+
+          <hr class="my-4 border-white/5" />
+
+          <h4 class="text-xs font-medium text-gray-400 mb-2">Danh mục</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="block px-2 py-1 rounded hover:bg-white/5">Dashboard</a></li>
+            <li><a href="#" class="block px-2 py-1 rounded hover:bg-white/5">Landing</a></li>
+            <li><a href="#" class="block px-2 py-1 rounded hover:bg-white/5">E-commerce</a></li>
+            <li><a href="#" class="block px-2 py-1 rounded hover:bg-white/5">Portfolio</a></li>
+          </ul>
+        </div>
+      </aside>
+
+      <!-- CONTENT -->
+      <section class="md:col-span-9">
+        <!-- top actions -->
+        <div class="flex items-center justify-between mb-6">
+          <h1 class="text-2xl font-semibold">Templates</h1>
+          <div class="flex items-center gap-3">
+            <span class="text-sm text-gray-400">Sắp xếp theo:</span>
+            <select class="bg-gray-800/60 rounded px-2 py-1 text-sm">
+              <option>Mới nhất</option>
+              <option>Bán chạy</option>
+              <option>Giá: thấp → cao</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- cards grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="create-post">
+          <!-- Example card (copy / generate dynamically from backend) -->
+          <!-- <article class="rounded-lg bg-gray-800/50 p-4 border border-white/5">
+            <div class="h-40 rounded bg-gradient-to-r from-indigo-700 to-pink-600 mb-3 flex items-end p-3">
+              <span class="bg-white/10 text-xs py-1 px-2 rounded text-white">Dashboard</span>
+            </div>
+
+            <h3 class="font-semibold text-lg">Admin Dashboard UI</h3>
+            <p class="text-sm text-gray-400 my-2">Template admin panel, charts, components, responsive.</p>
+
+            <div class="flex items-center justify-between mt-4">
+              <div class="flex items-center gap-3">
+                <span class="text-sm font-medium">₫199,000</span>
+                <span class="text-xs text-gray-400">• 1.2k sales</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <button class="px-3 py-1 text-sm rounded bg-white/5 hover:bg-white/10">Preview</button>
+                <button class="px-3 py-1 text-sm rounded bg-indigo-600 hover:bg-indigo-500 text-white">Buy</button>
+              </div>
+            </div>
+          </article> -->
+
+          <!-- duplicate sample cards -->
+          <!-- <article class="rounded-lg bg-gray-800/50 p-4 border border-white/5"> -->
+            <!-- <div class="h-40 rounded bg-gradient-to-r from-green-600 to-teal-500 mb-3 flex items-end p-3">
+              <span class="bg-white/10 text-xs py-1 px-2 rounded text-white">Landing</span>
+            </div> -->
+
+            <!-- <div class="h-40 rounded-lg overflow-hidden mb-3 relative">
+              <img src="/img/templates2.png"
+                  class="w-full h-full object-cover"
+                  alt="preview">
+              
+              <span class="absolute bottom-3 left-3 bg-black/40 text-xs py-1 px-2 rounded text-white">
+                  CATEGORY
+              </span>
+          </div>
+
+            <h3 class="font-semibold text-lg">Startup Landing</h3>
+            <p class="text-sm text-gray-400 my-2">Modern marketing landing template, responsive and animated.</p>
+            <div class="flex items-center justify-between mt-4">
+              <div class="flex items-center gap-3">
+                <span class="text-sm font-medium">₫99,000</span>
+                <span class="text-xs text-gray-400">• 800 sales</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <button class="px-3 py-1 text-sm rounded bg-white/5 hover:bg-white/10">Preview</button>
+                <button class="px-3 py-1 text-sm rounded bg-indigo-600 hover:bg-indigo-500 text-white">Buy</button>
+              </div>
+            </div>
+          </article> -->
+
+          <!-- more cards... -->
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Floating Create Button (mobile-friendly) -->
+  <button id="create-fab" title="Tạo bài mới" class="fixed right-6 bottom-6 z-50 inline-flex items-center gap-2 rounded-full bg-indigo-600 p-3 text-white shadow-lg sm:hidden">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-5 h-5">
+      <path d="M12 5v14M5 12h14" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+
+  <!-- CREATE POST MODAL -->
+  <div id="modal" aria-hidden="true" class="fixed inset-0 z-50 hidden items-center justify-center">
+    <div class="absolute inset-0 bg-black/60" id="modal-backdrop"></div>
+
+    <div class="relative max-w-2xl w-full rounded-lg bg-gray-800/60 border border-white/5 p-6 z-10">
+      <div class="flex items-center justify-between mb-4">
+        <h2 class="text-lg font-semibold">Tạo bài đăng template</h2>
+        <button id="modal-close" class="text-gray-400 hover:text-white">Đóng ✕</button>
+      </div>
+
+      <form id="create-form" class="space-y-4" onsubmit="handleSubmit(event)">
+        <div>
+          <label class="block text-sm text-gray-300">Tiêu đề</label>
+          <input name="title" required class="mt-1 w-full rounded bg-gray-900/50 px-3 py-2 text-sm focus:outline-indigo-500" />
+        </div>
+
+        <div>
+          <label class="block text-sm text-gray-300">Mô tả</label>
+          <textarea name="description" rows="4" required class="mt-1 w-full rounded bg-gray-900/50 px-3 py-2 text-sm focus:outline-indigo-500"></textarea>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label class="block text-sm text-gray-300">Giá (VND)</label>
+            <input name="price" type="number" min="0" required class="mt-1 w-full rounded bg-gray-900/50 px-3 py-2 text-sm" />
+          </div>
+          <div>
+            <label class="block text-sm text-gray-300">Thể loại</label>
+            <input name="category" class="mt-1 w-full rounded bg-gray-900/50 px-3 py-2 text-sm" />
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-sm text-gray-300">Ảnh preview</label>
+          <input id="file" name="file" type="file" accept="image/*" class="mt-1 w-full text-sm" />
+          <p class="text-xs text-gray-400 mt-1">Kích thước tối đa gợi ý: 1920x1080</p>
+        </div>
+
+        <div class="flex items-center justify-end gap-3">
+          <button type="button" id="modal-cancel" class="px-4 py-2 rounded bg-white/5 hover:bg-white/10">Hủy</button>
+          <button type="submit" class="px-4 py-2 rounded bg-indigo-600 hover:bg-indigo-500 text-white">Đăng lên Marketplace</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="/js/home.js">
+  </script>
+</body>
+</html>
