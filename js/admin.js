@@ -319,11 +319,14 @@
                 setTimeout(() => {
                     sendMessageToBoxGDTG('Người B', 'Em tặng a số tiền đấy đó hihi', 'https://minhdepzzai.github.io/OnlyCode/img/mixi.png');
                 }, 5000); // 2000ms = 2s
+            }
+            else if(cnt == 5){
                 setTimeout(() => {
-                    window.location.href = "https://minhdepzzai.github.io/OnlyCode/html/thanks.html";
-
-                }, 15000); // 2000ms = 2s
-                
+                    sendMessageToBoxGDTG('Người B', 'Chúc e thuyết trình bài học tốt nhé.', 'https://minhdepzzai.github.io/OnlyCode/img/mixi.png');
+                }, 5000); // 2000ms = 2s
+                setTimeout(() => {
+                    sendMessageToBoxGDTG('Người B', 'Cảm ơn các bạn đã xem demo của nhóm mình, hãy cùng quay lại bài thuyết trình tiếp nào !', 'https://minhdepzzai.github.io/OnlyCode/img/mixi.png');
+                }, 5000); // 2000ms = 2s
             }
         }
         sendMessageToBoxGDTG('Người A', 'Alo lộn đồ', 'https://minhdepzzai.github.io/OnlyCode/img/sena.png');
