@@ -312,7 +312,7 @@
                     sendMessageToBoxGDTG('Người B', 'Em đã nhận được toàn bộ source code của a DoMini rồi ạ. Em rất ưng mắt và thích dịch vụ này ạ', 'https://minhdepzzai.github.io/OnlyCode/img/sena.png');
                 }, 5000); // 2000ms = 2s
                 setTimeout(() => {
-                    sendMessageToBoxGDTG('Người B', 'Nhớ vote cho a 5 sao nhé em yêu', 'https://minhdepzzai.github.io/OnlyCode/img/mixi.png');
+                    sendMessageToBoxGDTG('Người B', 'Nhớ vote cho a 5 sao nhé em yêu 💓', 'https://minhdepzzai.github.io/OnlyCode/img/mixi.png');
                 }, 8000); // 2000ms = 2s
             }
             else if(cnt == 4){
@@ -322,11 +322,11 @@
             }
             else if(cnt == 5){
                 setTimeout(() => {
-                    sendMessageToBoxGDTG('Người B', 'Chúc e thuyết trình bài học tốt nhé.', 'https://minhdepzzai.github.io/OnlyCode/img/mixi.png');
+                    sendMessageToBoxGDTG('Người B', 'Chúc a thuyết trình bài học tốt nhé.', 'https://minhdepzzai.github.io/OnlyCode/img/mixi.png');
                 }, 5000); // 2000ms = 2s
                 setTimeout(() => {
                     sendMessageToBoxGDTG('Người B', 'Cảm ơn các bạn đã xem demo của nhóm mình, hãy cùng quay lại bài thuyết trình tiếp nào !', 'https://minhdepzzai.github.io/OnlyCode/img/mixi.png');
-                }, 5000); // 2000ms = 2s
+                }, 7000); // 2000ms = 2s
             }
         }
         sendMessageToBoxGDTG('Người A', 'Alo lộn đồ', 'https://minhdepzzai.github.io/OnlyCode/img/sena.png');
